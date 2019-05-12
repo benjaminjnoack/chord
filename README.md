@@ -1,12 +1,26 @@
 # chord
 
-`chord [l] [gu] [c position] [t tuning] [chord]`
+#### Build
 
--c --capo position
--g --guitar fretboard notation
--l --list all available chords
--t --tunings
--u --unicode characters
+`make`
 
-First goal: major and minor triads along with alternate notations (C, Cmaj, CM)
-Default to major chord
+#### Usage
+
+`chord root[quality]`
+
+Where `root` is the chord root,
+and `quality` is an optional chord quality.
+The default quality is a major triad.
+Available qualities include
+
+* `M` or `Maj` for major triad
+* `m` or `min` for minor triad
+* `dim` for diminished traid
+* `+` or `aug` for augmented triad
+
+##### Example
+
+```
+ben@gazelle:~/chord$ ./chord C#aug
+C# F A
+````
