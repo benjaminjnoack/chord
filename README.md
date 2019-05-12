@@ -4,6 +4,8 @@
 
 `make`
 
+_NOTE_: `make clean` is the only other currently defined target
+
 #### Usage
 
 `chord root[quality]`
@@ -21,6 +23,6 @@ Available qualities include
 ##### Example
 
 ```
-ben@gazelle:~/chord$ ./chord C#aug
+$ ./chord C#aug
 C# F A
 ````
