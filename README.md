@@ -4,8 +4,6 @@
 
 `make`
 
-_NOTE_: `make clean` is the only other currently defined target
-
 #### Usage
 
 `chord root[quality]`
@@ -13,7 +11,7 @@ _NOTE_: `make clean` is the only other currently defined target
 Where `root` is the chord root,
 and `quality` is an optional chord quality.
 The default quality is a major triad.
-Available qualities include
+Available qualities include:
 
 * `M` or `Maj` for major triad
 * `m` or `min` for minor triad
