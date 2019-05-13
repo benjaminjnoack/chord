@@ -1,7 +1,11 @@
+#ifndef CHORD_H
+#define CHORD_H
+
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
+
 /**
  * invervals between notes defined in half steps
  */
@@ -13,13 +17,71 @@ enum interval {
 	MAJOR_THIRD = 4,
 	DIMINISHED_FIFTH = 6,
 	PERFECT_FIFTH = 7,
-	AUGMENTED_FIFTH = 8
+	AUGMENTED_FIFTH = 8,
+	DIMINISHED_SEVENTH = 9,
+	MINOR_SEVENTH = 10,
+	MAJOR_SEVENTH = 11
 };
 
-extern int AUGMENTED_TRIAD[];
-extern int DIMINISHED_TRIAD[];
-extern int MAJOR_TRIAD[];
-extern int MINOR_TRIAD[];
+static int AUGMENTED_TRIAD_QUALITY[] = {
+	MAJOR_THIRD,
+	AUGMENTED_FIFTH,
+	NULL_TERMINATOR
+};
+
+static int AUGMENTED_MAJOR_SEVENTH_QUALITY[] = {
+	MAJOR_THIRD,
+	PERFECT_FIFTH,
+	MINOR_SEVENTH,
+	NULL_TERMINATOR
+};
+
+static int DOMINANT_SEVENTH_QUALITY[] = {
+	MAJOR_THIRD,
+	PERFECT_FIFTH,
+	MINOR_SEVENTH,
+	NULL_TERMINATOR
+};
+
+static int DIMINISHED_SEVENTH_QUALITY[] = {
+	MINOR_THIRD,
+	DIMINISHED_FIFTH,
+	DIMINISHED_SEVENTH,
+	NULL_TERMINATOR
+};
+
+static int DIMINISHED_TRIAD_QUALITY[] = {
+	MINOR_THIRD,
+	DIMINISHED_FIFTH,
+	NULL_TERMINATOR
+};
+
+static int MAJOR_TRIAD_QUALITY[] = {
+	MAJOR_THIRD,
+	PERFECT_FIFTH,
+	NULL_TERMINATOR
+};
+
+static int MINOR_TRIAD_QUALITY[] = {
+	MINOR_THIRD,
+	PERFECT_FIFTH,
+	NULL_TERMINATOR
+};
+
+static int MAJOR_SEVENTH_QUALITY[] = {
+	MAJOR_THIRD,
+	PERFECT_FIFTH,
+	MAJOR_SEVENTH,
+	NULL_TERMINATOR
+};
+
+static int MINOR_SEVENTH_QUALITY[] = {
+	MINOR_THIRD,
+	PERFECT_FIFTH,
+	MINOR_SEVENTH,
+	NULL_TERMINATOR
+};
 
 int *getquality(char *chord);
 
+#endif /* CHORD_H */

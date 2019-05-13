@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	if (strlen(notes[r]) == strlen(argv[optind])) {
-		quality = MAJOR_TRIAD;
+		quality = MAJOR_TRIAD_QUALITY;
 	} else {
 		quality = getquality(argv[optind] + strlen(notes[r]));
 		if (quality == NULL) {
