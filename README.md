@@ -22,6 +22,8 @@ Available qualities include:
 * `7` - dominant seventh
 * `dim7` - diminished seventh
 * `+7` or `aug7` - augmented seventh
+* `sus2` - suspended second
+* `sus4` - suspended fourth
 
 ##### Example
 
