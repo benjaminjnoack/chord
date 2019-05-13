@@ -21,7 +21,7 @@ Available qualities include:
 * `m7` or `min7` - minor seventh
 * `7` - dominant seventh
 * `dim7` - diminished seventh
-* `+7` - augmented seventh
+* `+7` or `aug7` - augmented seventh
 
 ##### Example
 
