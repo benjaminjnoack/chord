@@ -23,6 +23,12 @@ int *getquality(char *chord) {
 		return SUSPENDED_FOURTH_QUALITY;
 	} else if ((strcasecmp(chord, "sus2") == 0)) {
 		return SUSPENDED_SECOND_QUALITY;
+	} else if ((strcasecmp(chord, "add4") == 0)) {
+		return ADDED_FOURTH_QUALITY;
+	} else if ((strcasecmp(chord, "add6") == 0)) {
+		return ADDED_SIXTH_QUALITY;
+	} else if ((strcasecmp(chord, "add2") == 0) || (strcasecmp(chord, "add9") == 0)) {
+		return ADDED_NINTH_QUALITY;
 	}
 
 	return NULL;

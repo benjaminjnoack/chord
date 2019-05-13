@@ -24,10 +24,19 @@ Available qualities include:
 * `+7` or `aug7` - augmented seventh
 * `sus2` - suspended second
 * `sus4` - suspended fourth
+* `add2` or `add9` - added ninth
+* `add4` - added fourth
+* `add6` - added sixth
 
-##### Example
+#### Example
 
 ```
 $ ./chord C#Maj7
 C# F Ab C 
 ````
+
+#### TODO
+
+* inversions
+* scales
+
