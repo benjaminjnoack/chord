@@ -17,7 +17,7 @@ int *getquality(char *chord) {
 		return DOMINANT_SEVENTH_QUALITY;
 	} else if (strcasecmp(chord, "dim7") == 0) {
 		return DIMINISHED_SEVENTH_QUALITY;
-	} else if (strcmp(chord, "+7") == 0) {
+	} else if ((strcasecmp(chord, "aug7") == 0) || (strcmp(chord, "+7") == 0)) {
 		return AUGMENTED_MAJOR_SEVENTH_QUALITY;
 	}
 
