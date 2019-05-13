@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
 
 	while (quality[i] != NULL_TERMINATOR) {
 		n = r + quality[i];
-		if (n >= NOTESN) {
+		while (n >= NOTESN) {
 			n -= NOTESN;
 		}
 

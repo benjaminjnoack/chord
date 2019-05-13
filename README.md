@@ -39,4 +39,6 @@ C# F Ab C
 
 * inversions
 * scales
+* added tones flags
+* print the interval of the note
 
