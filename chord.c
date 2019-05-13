@@ -19,6 +19,10 @@ int *getquality(char *chord) {
 		return DIMINISHED_SEVENTH_QUALITY;
 	} else if ((strcasecmp(chord, "aug7") == 0) || (strcmp(chord, "+7") == 0)) {
 		return AUGMENTED_MAJOR_SEVENTH_QUALITY;
+	} else if ((strcasecmp(chord, "sus4") == 0)) {
+		return SUSPENDED_FOURTH_QUALITY;
+	} else if ((strcasecmp(chord, "sus2") == 0)) {
+		return SUSPENDED_SECOND_QUALITY;
 	}
 
 	return NULL;
