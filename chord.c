@@ -1,14 +1,20 @@
 #include "chord.h"
 
-int *getquality(char *chord) {
+struct chord quality;
+
+void buildquality(char *chord, int sus, int add) {
 	if ((strcmp(chord, "M") == 0) || (strcasecmp(chord, "Maj") == 0)) {
-		return MAJOR_TRIAD_QUALITY;
+		quality.third = MAJOR_THIRD;
+		quality.fifth = PERFECT_FIFTH;
 	} else if ((strcmp(chord, "m") == 0) || (strcasecmp(chord, "min") == 0)) {
-		return MINOR_TRIAD_QUALITY;
+		quality.third = MAJOR_THIRD;
+		quality.fifth = PERFECT_FIFTH;
 	} else if (strcasecmp(chord, "dim") == 0) {
-		return DIMINISHED_TRIAD_QUALITY;
+		quality.third = MINOR_THIRD;
+		quality.fifth = DIMINISHED_FIFTH;
 	} else if ((strcmp(chord, "+") == 0) || (strcasecmp(chord, "aug") == 0)) {
-		return AUGMENTED_TRIAD_QUALITY;
+		quality.third = MAJOR_THIRD;
+		quality.fifth = AUGMENTED_FIFTH;
 	} else if ((strcmp(chord, "M7") == 0) || (strcasecmp(chord, "Maj7") == 0)) {
 		return MAJOR_SEVENTH_QUALITY;
 	} else if ((strcmp(chord, "m7") == 0) || (strcmp(chord, "min7") == 0)) {
@@ -29,8 +35,10 @@ int *getquality(char *chord) {
 		return ADDED_SIXTH_QUALITY;
 	} else if ((strcasecmp(chord, "add2") == 0) || (strcasecmp(chord, "add9") == 0)) {
 		return ADDED_NINTH_QUALITY;
+	} else {
+		return NULL;
 	}
 
-	return NULL;
+	return &quality;
 }
 

@@ -33,7 +33,7 @@ int findRoot(char *chord) {
 	} else {
 		return -1;
 	}
-	
+	printf("%s\n", chord);
 	switch (chord[1]) {
 		case '#':
 		case 'b':
@@ -43,7 +43,7 @@ int findRoot(char *chord) {
 		default:
 			n = 1;
 	}
-
+	//For B, it finds Bb first
 	for (i = 0; i < NOTESN; i++) {
 		if (strncmp(chord, notes[i], n) == 0) {
 			return i;

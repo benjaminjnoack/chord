@@ -37,8 +37,11 @@ C# F Ab C
 
 #### TODO
 
-* inversions
-* scales
-* added tones flags
-* print the interval of the note
+* added flag (adding a note)
+* suspended flag? (changing the third)
+* print note interval (and semitones from root)
+* inversions flag
 
+* print fingering
+* capo flag
+* alternate tunings (enum of possibilities)

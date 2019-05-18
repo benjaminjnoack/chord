@@ -6,9 +6,6 @@
 #include <string.h>
 #include <strings.h>
 
-/**
- * invervals between notes defined in half steps
- */
 enum interval {
 	NULL_TERMINATOR = 0,
 	HALF_STEP = 1,
@@ -24,6 +21,17 @@ enum interval {
 	MINOR_SEVENTH = 10,
 	MAJOR_SEVENTH = 11,
 	ADDED_NINTH = 14
+};
+
+struct chord {
+	char *root;
+	enum interval second;
+	enum interval third;
+	enum interval fourth;
+	enum interval fifth;
+	enum interval sixth;
+	enum interval seventh;
+	enum interval ninth;
 };
 
 static int ADDED_FOURTH_QUALITY[] = {
